@@ -1,0 +1,41 @@
+Prompt:
+
+Padaryk santrauką visų atsiliepimų, pagal šį input:
+x:......
+
+Įkelsiu pavyzdį:
+x:
+Renginys "Loftas"
+1. Renginio metu patiko bendrauti ir dirbti su kitais savanoriais
+2. Komunikacija iš renginio organizacijų buvo prasta, veiklos visai neblogos
+3. Nepatiko kalbėtis su vadovais, jie suteikė per mažai informacijos, bet užmezgiau naujų pažinčių
+
+y:
+Pagrinde savanoriams patiko bendrauti ir susipažinti su naujais žmonėmis.
+Tačiau savanoriai skundžiasi prasta komunikacija iš renginio organizatoriu
+
+
+
+1.txt:
+Savanoriai teigiamai vertino renginį „Žalias Vilnius“ – buvo smagu savanoriauti,
+patiko draugiška atmosfera ir bendravimas su kitais savanoriais.
+Tačiau kartojasi nusiskundimai dėl komunikacijos iš organizatorių ir
+vadovų – informacija apie pokyčius buvo nepakankamai tiksli ir vėluojanti.
+Visgi bendra patirtis vertinama gerai, savanoriai dalyvautų dar kartą.
+
+
+
+2.txt:
+Savanoriai labai teigiamai vertino „Technology summit 2025“ – renginys buvo įdomus ir informatyvus,
+patiko aiški organizatorių komunikacija, draugiška savanorių komanda, galimybė nemokamai patekti
+į brangų renginį, pabendrauti su daug pasiekusiais žmonėmis ir gauti dovanėlių.
+Tačiau dalis savanorių nusivylė, kad dėl didelio užimtumo turėjo mažai laiko pamatyti patį renginį,
+todėl kitą kartą rinktųsi kitą savanoriavimo poziciją.
+
+
+
+3.txt:
+Savanoriai džiaugėsi galimybe dirbti su bendraamžiais, įgyti naudingos patirties ir užmegzti naujų pažinčių
+bei profesinių ryšių renginyje „Vilniaus Dienos“. Tačiau dalis savanorių nusivylė kitų savanorių
+požiūriu – kai kurie, jų nuomone, vengė darbo, menkai prisidėjo prie renginio ir atrodė atėję
+tik dėl nemokamo maitinimo.

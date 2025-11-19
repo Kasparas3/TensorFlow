@@ -1,0 +1,47 @@
+@startuml
+left to right direction
+
+actor "Organizacijos atstovas" as Org
+actor "Sistemos administratorius" as Admin
+actor "Savanoris" as Vol
+
+rectangle "AI atsiliepimų ir apklausų\nsantraukos įrankis" as System {
+
+  usecase "Registruotis / prisijungti" as UC_Login
+  usecase "Sukurti / redaguoti renginį" as UC_Event
+  usecase "Siųsti atsiliepimų nuorodas\nsavanoriams" as UC_SendLinks
+  usecase "Pateikti atsiliepimą" as UC_Feedback
+  usecase "Peržiūrėti atsiliepimus (raw)" as UC_ViewRaw
+  usecase "Sugeneruoti santrauką\n(iš X→Y)" as UC_Summarize
+  usecase "Sugeneruoti rekomendacijas\norganizacijai" as UC_Insights
+  usecase "Peržiūrėti santraukų\nataskaitas" as UC_Reports
+  usecase "Eksportuoti ataskaitą\n(PDF/CSV)" as UC_Export
+  usecase "Valdyti vartotojus ir teises" as UC_UserMgmt
+}
+
+Org --> UC_Login
+Org --> UC_Event
+Org --> UC_SendLinks
+Org --> UC_ViewRaw
+Org --> UC_Summarize
+Org --> UC_Insights
+Org --> UC_Reports
+Org --> UC_Export
+
+Vol --> UC_Feedback
+
+Admin --> UC_Login
+Admin --> UC_UserMgmt
+
+UC_Summarize .> UC_ViewRaw : <<include>>
+UC_Insights .> UC_Summarize : <<include>>
+UC_Reports .> UC_Summarize : <<include>>
+UC_Export .> UC_Reports : <<include>>
+
+' Išorinė generatyvaus DI paslauga
+rectangle "Generatyvaus DI paslauga\n(LLM API)" as AI
+
+UC_Summarize ..> AI : "siunčia X (atsiliepimus)\n ir gauna Y (santrauką)"
+UC_Insights ..> AI : "papildomi klausimai\napie rekomendacijas"
+
+@enduml
